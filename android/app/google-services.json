@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "465358976094",
+    "project_id": "database-pdp-c6270",
+    "storage_bucket": "database-pdp-c6270.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:465358976094:android:fa319eea621db47ddaf0cf",
+        "android_client_info": {
+          "package_name": "com.example.database"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "465358976094-5vaqe5apce7kqhl4jhgsh68o6gt2ba5c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBD9mJ8Iq8rjcTxDzjoydw-pMDF6juQSDU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "465358976094-5vaqe5apce7kqhl4jhgsh68o6gt2ba5c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

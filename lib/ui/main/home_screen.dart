@@ -1,5 +1,6 @@
 import 'package:database/services/local/shared/auth/auth_service.dart';
 import 'package:database/services/network/firebase/database/database_service.dart';
+import 'package:database/ui/database/add_post_screen.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:database/models/DatabasePostUser.dart';
@@ -112,7 +113,9 @@ class _MainScreenState extends State<MainScreen> with WidgetsBindingObserver{
         },
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () async {},
+        onPressed: () async {
+          Navigator.push(context, MaterialPageRoute(builder: (context)=> const NewPostScreen()));
+        },
         child: const Icon(Icons.add),
       ),
     );

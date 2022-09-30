@@ -12,7 +12,6 @@ class StorageService{
     UploadTask uploadTask = ref.putFile(image);
     TaskSnapshot taskSnapshot = await uploadTask.whenComplete(() => {});
     String url = await taskSnapshot.ref.getDownloadURL();
-    print('::::::::::::::::::::::::::::::::::::::::::::::::::$url');
     return url;
   }
 }

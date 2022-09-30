@@ -82,7 +82,9 @@ class _NewPostScreenState extends State<NewPostScreen>{
                           child: CircularProgressIndicator(),
                         );
                       },);
-                      await uploadImage();
+                        await uploadImage().then((value) => {
+                          Navigator.pop(context)
+                        });
                     },
                     child: const Text('post'),
                   ),
@@ -93,7 +95,8 @@ class _NewPostScreenState extends State<NewPostScreen>{
       ),
     );
   }
-  Future uploadImage() async{
+  Future<bool> uploadImage() async{
+    var ret = false;
     await StorageService.uploadImage(image!).then((value) => {
       DatabaseService.addPost(
           Post(
@@ -105,5 +108,6 @@ class _NewPostScreenState extends State<NewPostScreen>{
       ),
       Navigator.pop(context)
     });
+    return ret;
   }
 }

@@ -80,7 +80,9 @@ class _MainScreenState extends State<MainScreen> with WidgetsBindingObserver{
         posts.add(Post(
             title: addItem['title'],
             userId: addItem['userId'],
-            content: addItem['content']));
+            content: addItem['content'],
+            imgUrl: addItem['imgUrl']
+        ));
       });
     });
   }
@@ -96,6 +98,17 @@ class _MainScreenState extends State<MainScreen> with WidgetsBindingObserver{
         itemCount: posts.length,
         itemBuilder: (context, index) {
           return ListTile(
+            leading: Container(
+              width: 50,
+              height: 50,
+              decoration: BoxDecoration(
+                borderRadius: const BorderRadius.all(Radius.circular(50)),
+                image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: NetworkImage(posts[index].imgUrl)
+                )
+              ),
+            ),
             title: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
